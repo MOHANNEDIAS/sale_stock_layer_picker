@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_layer_picker" model="ir.ui.view">
+        <field name="name">sale.order.form.layer.picker</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//field[@name='order_line']/list//field[@name='product_uom_qty']" position="after">
+                <button name="action_open_layer_picker" 
+                        type="object" 
+                        icon="fa-list-ul" 
+                        title="Pick specific Cost Batch"
+                        class="btn btn-link"/>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/list//field[@name='price_unit']" position="after">
+                <field name="target_layer_id" optional="hide" groups="base.group_no_one"/>
+            </xpath>
+            
+        </field>
+    </record>
+</odoo>

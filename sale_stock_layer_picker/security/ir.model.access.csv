@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_layer_picker,stock.layer.picker,model_stock_layer_picker,base.group_user,1,1,1,1
+access_stock_layer_picker_line,stock.layer.picker.line,model_stock_layer_picker_line,base.group_user,1,1,1,1
+access_sales_confirm_warning_wizard,sales.confirm.warning.wizard,model_sales_confirm_warning_wizard,base.group_user,1,1,1,1

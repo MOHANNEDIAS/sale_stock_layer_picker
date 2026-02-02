@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_stock_layer_picker_form" model="ir.ui.view">
+        <field name="name">stock.layer.picker.form</field>
+        <field name="model">stock.layer.picker</field>
+        <field name="arch" type="xml">
+            <form string="Pick Inventory Batches">
+                <sheet>
+                    <group>
+                        <field name="product_id" readonly="1"/>
+                    </group>
+                    <field name="line_ids">
+                        <list editable="bottom" create="0" delete="0">
+                            <field name="layer_id" invisible="1"/>
+                            
+                            <field name="create_date" string="Date In"/>
+                            <field name="unit_cost" widget="monetary"/>
+                            <field name="available_qty"/>
+                            <field name="selected_qty" sum="Total Picked"/>
+                        </list>
+                    </field>
+                </sheet>
+                <footer>
+                    <button string="Apply Split" name="action_apply" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
