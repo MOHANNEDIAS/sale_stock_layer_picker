@@ -25,8 +25,9 @@
         'views/stock_picking_view.xml',
     ],
     'application': True,
+    'images': ['static/description/main_screenshot.png'],
     'installable': True,
-    'price': 40.00,
+    'price': 10.00,
     'currency': 'EUR',
     'license': 'OPL-1',
 }
